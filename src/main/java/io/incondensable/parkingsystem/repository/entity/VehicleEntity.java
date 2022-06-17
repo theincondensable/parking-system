@@ -1,7 +1,6 @@
 package io.incondensable.parkingsystem.repository.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "VEHICLE")
@@ -17,9 +16,6 @@ public class VehicleEntity {
 
     @Column(name = "plate_no")
     private String plateNumber;
-
-//    @OneToMany(mappedBy = "vehicle", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    private List<ParkingEntity> parkingEntities;
 
     public VehicleEntity() {
     }
@@ -53,12 +49,4 @@ public class VehicleEntity {
     public void setPlateNumber(String plateNumber) {
         this.plateNumber = plateNumber;
     }
-
-//    public List<ParkingEntity> getParkingEntities() {
-//        return parkingEntities;
-//    }
-//
-//    public void setParkingEntities(List<ParkingEntity> parkingEntities) {
-//        this.parkingEntities = parkingEntities;
-//    }
 }

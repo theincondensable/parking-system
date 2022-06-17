@@ -3,13 +3,12 @@ package io.incondensable.parkingsystem.service.facade;
 import io.incondensable.parkingsystem.common.BusinessException;
 import io.incondensable.parkingsystem.common.ExceptionMessage;
 import io.incondensable.parkingsystem.repository.entity.PriceRateEntity;
+import io.incondensable.parkingsystem.repository.entity.VehicleEntity;
 import io.incondensable.parkingsystem.service.ParkingService;
 import io.incondensable.parkingsystem.service.PriceRateService;
 import io.incondensable.parkingsystem.service.VehicleService;
-import io.incondensable.parkingsystem.repository.entity.VehicleEntity;
 import io.incondensable.parkingsystem.web.dto.DtoVehicleEntranceRequest;
 import io.incondensable.parkingsystem.web.dto.DtoVehicleEntranceResponse;
-import org.springframework.http.HttpStatus;
 
 @Facade
 public class VehicleEntranceFacade {

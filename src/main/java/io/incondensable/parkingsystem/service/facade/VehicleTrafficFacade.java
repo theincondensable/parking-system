@@ -5,10 +5,8 @@ import io.incondensable.parkingsystem.common.ExceptionMessage;
 import io.incondensable.parkingsystem.repository.entity.ParkingEntity;
 import io.incondensable.parkingsystem.repository.entity.VehicleEntity;
 import io.incondensable.parkingsystem.service.ParkingService;
-import io.incondensable.parkingsystem.service.PriceRateService;
 import io.incondensable.parkingsystem.service.VehicleService;
 import io.incondensable.parkingsystem.web.dto.DtoVehicleTrafficInformation;
-import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +16,10 @@ public class VehicleTrafficFacade {
 
     private final VehicleService vehicleService;
     private final ParkingService parkingService;
-    private final PriceRateService priceRateService;
 
-    public VehicleTrafficFacade(VehicleService vehicleService, ParkingService parkingService, PriceRateService priceRateService) {
+    public VehicleTrafficFacade(VehicleService vehicleService, ParkingService parkingService) {
         this.vehicleService = vehicleService;
         this.parkingService = parkingService;
-        this.priceRateService = priceRateService;
     }
 
     public List<DtoVehicleTrafficInformation> showVehicleTrafficInformation(String vehiclePlateNumber) {
